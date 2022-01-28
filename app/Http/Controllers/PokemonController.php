@@ -26,7 +26,7 @@ class PokemonController extends Controller
      */
     public function create()
     {
-        //
+        return view('pokemon.create');
     }
 
     /**
@@ -37,7 +37,15 @@ class PokemonController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $new_pokemon = new Pokemon();
+
+        $new_pokemon->fill($data);
+
+        $new_pokemon->save();
+
+        return redirect()->route('pokemon.show', $new_pokemon->id);
     }
 
     /**
@@ -66,7 +74,11 @@ class PokemonController extends Controller
      */
     public function edit($id)
     {
-        //
+        $pokemon = Pokemon::find($id);
+
+        if ($pokemon) {
+            return view('pokemon.edit', compact('pokemon'));
+        }
     }
 
     /**
@@ -78,7 +90,17 @@ class PokemonController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        // dump($data);
+
+        // 1 - ottenere il dato da aggiornare
+        $pokemon = Pokemon::find($id);
+
+        // 2 - aggiornare le colonne (save non richiest)
+        $pokemon->update($data);
+
+        // 3 - redirect
+        return redirect()->route('pokemon.show', $pokemon->id);
     }
 
     /**
