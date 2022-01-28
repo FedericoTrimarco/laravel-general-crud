@@ -2,6 +2,14 @@
 
 @section('main-content')
     <div class="container pokedex">
+        {{-- messaggio di avvenuta cancellazione --}}
+        @if (session('deleted'))
+            <div class="alert alert-success mt-5">
+                <strong>{{ session('deleted') }}</strong>
+                eliminato dal pokedex.
+            </div>
+        @endif
+        {{-- all pokemon in our pokedex --}}
         <div class="row">
             @foreach ($pokemon as $pkmn)
                 <div class="col-4 my-5 p-5">

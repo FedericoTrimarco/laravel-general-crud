@@ -13,8 +13,18 @@
             </div>
         </div>
         <div class="action d-flex justify-content-center mt-4">
-            <a href="{{ route('pokemon.edit', $pokemon->id) }}" class="btn btn-primary">EDIT</a>
-            <a href="/" class="btn btn-danger mx-3">DELETE</a>
+            <a href="{{ route('pokemon.edit', $pokemon->id) }}" class="btn btn-primary me-3">EDIT</a>
+            <form action="{{ route('pokemon.destroy', $pokemon->id) }}" method="POST">
+                @csrf
+                @method('DELETE')
+
+                <input
+                    type="submit"
+                    class="btn btn-danger"
+                    value="DELETE"
+                    onclick="return confirm('are you sure you want to delete this pokemon? ({{ $pokemon->name }})')"
+                >
+            </form>
         </div>
     </div>
 @endsection
