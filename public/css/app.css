@@ -24,3 +24,9 @@ section.home img {
 footer {
   background-color: #f7c501;
 }
+
+.pokedex .pokemon-card:hover {
+  outline: 5px solid #0077ff;
+  outline-offset: 4px;
+  cursor: pointer;
+}

@@ -12,7 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//home
 Route::get('/', function () {
     return view('home');
 });
+
+// pokemon
+Route::resource('/pokemon', 'PokemonController');
