@@ -1,0 +1,26 @@
+body {
+  height: 100vh;
+}
+body main {
+  flex-grow: 1;
+}
+
+header {
+  background-color: #f7c501;
+}
+header img {
+  width: 200px;
+}
+
+section.home {
+  background-image: url("https://images.gnwcdn.com/2021/articles/2021-10-22-17-04/pokemon-legends-arceus-new-pokemon-header.jpg/EG11/resize/1200x-1/pokemon-legends-arceus-new-pokemon-header.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+section.home img {
+  width: 600px;
+}
+
+footer {
+  background-color: #f7c501;
+}
