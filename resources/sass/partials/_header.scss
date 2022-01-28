@@ -3,4 +3,12 @@ header{
     img{
         width: 200px;
     }
+
+    a{
+        color: #000;
+        text-decoration: none;
+        &:hover{
+            color: #0077ff;
+        }
+    }
 }

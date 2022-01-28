@@ -3,5 +3,13 @@
         outline: 5px solid #0077ff;
         outline-offset: 4px;
         cursor: pointer;
+
+    }
+    a{
+        color: #000;
+        text-decoration: none;
+        &:hover{
+            color: #0077ff;
+        }
     }
 }

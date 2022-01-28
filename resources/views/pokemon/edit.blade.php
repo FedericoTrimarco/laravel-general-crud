@@ -20,7 +20,7 @@
             </div>
             <div class="mb-3">
                 <label for="src" class="form-label fx-bold fs-3">Image</label>
-                <textarea class="form-control" id="src" name="src" rows="2">{{ $pokemon->type }}</textarea>
+                <textarea class="form-control" id="src" name="src" rows="2">{{ $pokemon->src }}</textarea>
             </div>
 
             <button type="submit" class="btn btn-success">Save</button>

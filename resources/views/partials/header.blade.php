@@ -9,6 +9,7 @@
         </li>
         <li>
             <a href="{{ route('pokemon.create') }}" class="fs-3">Add Pokemon</a>
+            <div></div>
         </li>
     </ul>
     <img src="https://loghi-famosi.com/wp-content/uploads/2020/05/Pokemon-Logo.png" alt="pokemon-logo" class="pokemon-logo">
